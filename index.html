@@ -4,135 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Agronegócio Brasileiro</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-        header {
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://source.unsplash.com/1600x900/?soybean-field') center/cover no-repeat;
-            color: white;
-            text-align: center;
-            padding: 120px 20px;
-        }
-        h1 { font-size: 3.5rem; margin-bottom: 10px; }
-        h2 { color: #2e7d32; margin: 30px 0 15px; text-align: center; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
-        
-        nav {
-            background: #1b5e20;
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .hero-text { max-width: 800px; margin: 0 auto; }
-        
-        section {
-            padding: 60px 0;
-        }
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        .card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        .card:hover { transform: translateY(-10px); }
-        .card img {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-        }
-        .card-content {
-            padding: 20px;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 15px;
-        }
-        .gallery img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-            transition: transform 0.3s;
-        }
-        .gallery img:hover { transform: scale(1.05); }
-
-        footer {
-            background: #1b5e20;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-        .btn {
-            display: inline-block;
-            background: #4caf50;
-            color: white;
-            padding: 12px 30px;
-            border-radius: 50px;
-            text-decoration: none;
-            margin-top: 20px;
-            font-weight: bold;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <nav>
-        <ul>
-            <li><a href="#inicio">Início</a></li>
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#importancia">Importância</a></li>
-            <li><a href="#galeria">Galeria</a></li>
-        </ul>
+        <div class="nav-container">
+            <h2 class="logo">AgroBrasil</h2>
+            <ul id="nav-menu">
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#sobre">Sobre</a></li>
+                <li><a href="#importancia">Importância</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+            </ul>
+            <button class="menu-toggle" id="menu-toggle">☰</button>
+        </div>
     </nav>
 
     <header id="inicio">
         <div class="hero-text">
             <h1>Agronegócio Brasileiro</h1>
-            <p style="font-size: 1.4rem;">O celeiro do mundo</p>
+            <p>O celeiro do mundo 🌱</p>
             <a href="#sobre" class="btn">Saiba Mais</a>
         </div>
     </header>
 
-    <section id="sobre" style="background: #fff;">
+    <section id="sobre">
         <div class="container">
             <h2>Sobre o Agronegócio</h2>
-            <p style="text-align: center; max-width: 800px; margin: 0 auto 40px;">
-                O agronegócio é o setor mais importante da economia brasileira. Representa cerca de 24% do PIB nacional 
-                e é responsável por grande parte das exportações do país. Soja, milho, café, carne, açúcar e algodão 
-                são alguns dos principais produtos.
-            </p>
+            <p>O agronegócio é o setor mais importante da economia brasileira. Representa cerca de 24% do PIB e é responsável por grande parte das exportações do país.</p>
         </div>
     </section>
 
-    <section id="importancia" style="background: #f1f8e9;">
+    <section id="importancia">
         <div class="container">
             <h2>Por que é tão importante?</h2>
             
@@ -140,22 +44,22 @@
                 <div class="card">
                     <img src="https://source.unsplash.com/600x400/?soybean" alt="Soja">
                     <div class="card-content">
-                        <h3>🇧🇷 Líder Mundial</h3>
-                        <p>1º maior produtor e exportador de soja, café, açúcar, carne bovina e suco de laranja.</p>
+                        <h3>Líder Mundial</h3>
+                        <p>1º maior produtor de soja, café, açúcar, carne bovina e suco de laranja.</p>
                     </div>
                 </div>
                 <div class="card">
                     <img src="https://source.unsplash.com/600x400/?cattle-farm" alt="Pecuária">
                     <div class="card-content">
-                        <h3>Pecuária</h3>
-                        <p>Rebanho bovino de mais de 230 milhões de cabeças. Tecnologia e sustentabilidade em alta.</p>
+                        <h3>Pecuária Forte</h3>
+                        <p>Rebanho bovino de mais de 230 milhões de cabeças.</p>
                     </div>
                 </div>
                 <div class="card">
-                    <img src="https://source.unsplash.com/600x400/?coffee-harvest" alt="Café">
+                    <img src="https://source.unsplash.com/600x400/?technology-farm" alt="Tecnologia">
                     <div class="card-content">
                         <h3>Tecnologia no Campo</h3>
-                        <p>Plantio direto, drones, agricultura de precisão e genética avançada.</p>
+                        <p>Drones, agricultura de precisão e genética avançada.</p>
                     </div>
                 </div>
             </div>
@@ -167,19 +71,20 @@
             <h2>Galeria de Imagens</h2>
             <div class="gallery">
                 <img src="https://source.unsplash.com/800x600/?soybean-harvest" alt="Colheita de soja">
-                <img src="https://source.unsplash.com/800x600/?coffee-plantation" alt="Plantação de café">
-                <img src="https://source.unsplash.com/800x600/?cattle-brazil" alt="Gado Nelore">
-                <img src="https://source.unsplash.com/800x600/?corn-field" alt="Plantação de milho">
-                <img src="https://source.unsplash.com/800x600/?tractor-farm" alt="Máquinas agrícolas">
-                <img src="https://source.unsplash.com/800x600/?orange-plantation" alt="Laranjal">
+                <img src="https://source.unsplash.com/800x600/?coffee-plantation" alt="Café">
+                <img src="https://source.unsplash.com/800x600/?cattle-brazil" alt="Gado">
+                <img src="https://source.unsplash.com/800x600/?corn-field" alt="Milho">
+                <img src="https://source.unsplash.com/800x600/?tractor-farm" alt="Máquinas">
+                <img src="https://source.unsplash.com/800x600/?orange-plantation" alt="Laranja">
             </div>
         </div>
     </section>
 
     <footer>
-        <p><strong>Agronegócio Brasileiro</strong> — Alimentando o Brasil e o Mundo 🌱</p>
-        <p style="margin-top: 10px; opacity: 0.8;">Desenvolvido para demonstrar um site simples • 2026</p>
+        <p><strong>Agronegócio Brasileiro</strong> — Alimentando o Brasil e o Mundo</p>
+        <p>Desenvolvido em 2026</p>
     </footer>
 
+    <script src="script.js"></script>
 </body>
 </html>
